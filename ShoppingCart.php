@@ -251,7 +251,7 @@ class ShoppingCart extends Phalcon\Mvc\User\Component
     * @author Iparra         
     * @return bool
     */
-    public function has_options($rowId = '')
+    public function hasOptions($rowId = '')
     {
         if(!isset($this->_cart[$rowId]['options']) || count($this->_cart[$rowId]['options']) === 0)
         {
