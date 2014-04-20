@@ -357,7 +357,7 @@ class ShoppingCart extends Phalcon\Mvc\User\Component
     */
     private function _removeProduct($rowId = '')
     {
-        if($this->_cart[$rowId])
+        if(isset($this->_cart[$rowId]))
         {
             unset($this->_cart[$rowId]);
             $this->_updatePriceQty();
