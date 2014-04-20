@@ -65,7 +65,6 @@ Save file into library dir and open app/config/loader.php, now update this file.
 
 	$loader->register();
 ```
-<p>Update your packages with composer update or install with composer install.</p>
 
 <h1>Example Usage Phalcon Cart</h1>
 <h2>First create a new instance</h2>
