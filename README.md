@@ -1,5 +1,8 @@
-<h1>Complet cart system for Phalcon Framework</h1>
-<p>Phalcon cart provides complet cart system, allows you to create multiple instances to have all the areas we want independently.</p>
+<h1>Complet cart system for Phalcon</h1>
+<p>Phalcon cart provides complet cart system, allows you to create multiple instances to have all the areas we want independently.
+</p>
+* [Show demo](http://phalcon-tuts.com/phalconShop/)
+
 <h1>Installation with Composer</h1>
 <p>Create a new file composer.json, open and add the next code</p>
 ```json
@@ -10,9 +13,7 @@
     "minimum-stability": "dev"
 }
 ```
-
 <p>Update your packages with composer update or install with composer install.</p>
-<h1>Usage</h1>
 <p>Now open app/config/loader.php and replace the code.</p>
 ```php
 
@@ -39,6 +40,28 @@
 	$loader->register();
 ```
 
+<h1>Installation without Composer</h1>
+<p>
+Download file ShoppingCart.php and create a new directory library in app dir.
+Save file into library dir and open app/config/loader.php, now update this file.
+</p>
+```php
+	$loader = new \Phalcon\Loader();
+
+	/**
+	 * We're a registering a set of directories taken from the configuration file
+	 */
+	$loader->registerDirs(
+		array(
+			$config->application->controllersDir,
+			$config->application->modelsDir,
+			$config->application->libraryDir//register dir library dir
+		)
+	);
+
+	$loader->register();
+```
+<p>Update your packages with composer update or install with composer install.</p>
 
 <h1>Example Usage Phalcon Cart</h1>
 <h2>First create a new instance</h2>
