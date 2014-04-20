@@ -1,6 +1,7 @@
 {
     "name": "unodepiera/phalcon_cart",
     "description": "A shopping cart that allows multiple instances to work with PHP Phalcon",
+    "version": "1.0.0",
     "require": {
         "php": ">=5.3.0"
     },
