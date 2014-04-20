@@ -11,5 +11,6 @@
             "name": "unodepiera",
             "email": "unodepiera@uno-de-piera.com"
         }
-    ]
+    ],
+    "minimum-stability": "dev"
 }
