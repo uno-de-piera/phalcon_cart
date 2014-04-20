@@ -1,5 +1,8 @@
 <h1>Complet cart system for Phalcon</h1>
-<p>Phalcon cart provides complet cart system, allows you to create multiple instances to have all the areas we want independently.</p>
+<p>Phalcon cart provides complet cart system, allows you to create multiple instances to have all the areas we want independently.
+* [Show demo](http://phalcon-tuts.com/phalconShop/)
+</p>
+
 <h1>Installation with Composer</h1>
 <p>Create a new file composer.json, open and add the next code</p>
 ```json
