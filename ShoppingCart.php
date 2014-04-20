@@ -15,10 +15,10 @@ use Phalcon\Logger\Adapter\File as FileAdapter;
  */
 class ShoppingCart extends Phalcon\Mvc\User\Component
 {
-	/**
-	* @desc - content cart
-	*/
-	protected $_cart = array();
+    /**
+    * @desc - content cart
+    */
+    protected $_cart = array();
 
     /**
     * @desc - identificator for shopping cart
@@ -36,7 +36,7 @@ class ShoppingCart extends Phalcon\Mvc\User\Component
     * @author Iparra
     * @param $cartIdentificator - cart name
     */
-	public function __construct($cartIdentificator = "shop")
+    public function __construct($cartIdentificator = "shop")
     {     
         //set identifier cart
         $this->_identificator = $cartIdentificator;
@@ -46,7 +46,8 @@ class ShoppingCart extends Phalcon\Mvc\User\Component
         {
             $this->_cart = $this->session->get($this->_identificator);
         }
-
+        
+        $this->_createLogDir();
         $this->_logger = new FileAdapter("../app/logs/shoppingCart.log");
     }
 
@@ -302,14 +303,14 @@ class ShoppingCart extends Phalcon\Mvc\User\Component
     * @author Iparra
     * @return array
     */
-	public function getContent()
-	{
+    public function getContent()
+    {
         //asign content cart to $cart var and unset total_items and cart_total
         $cart = $this->_cart;
         unset($cart["total_items"]);
         unset($cart["cart_total"]);
-		return $cart;
-	}
+        return $cart;
+    }
 
     /**
      * Format Number
@@ -366,6 +367,22 @@ class ShoppingCart extends Phalcon\Mvc\User\Component
         }
         //the product not exists
         return FALSE;
+    }
+
+    /**
+    * @desc - create dir logs if not exists
+    * @access private
+    * @author Iparra
+    */
+    private function _createLogDir()
+    {
+        if(is_dir("../app")) 
+        {
+            if(!is_dir("../app/logs")) 
+            {
+                mkdir("../app/logs");
+            }
+        }
     }
 
     /**
