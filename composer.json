@@ -1,5 +1,5 @@
 {
-    "name": "shoppingCart-Phalcon",
+    "name": "shopping-cart-phalcon",
     "description": "A shopping cart that allows multiple instances to work with PHP Phalcon",
     "require": {
         "php": ">=5.3.0"
