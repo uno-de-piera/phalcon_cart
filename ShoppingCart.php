@@ -160,6 +160,7 @@ class ShoppingCart extends Phalcon\Mvc\User\Component
         {
             $this->add($product);
         }
+        return true;
     }
 
     /**
@@ -177,7 +178,10 @@ class ShoppingCart extends Phalcon\Mvc\User\Component
             return false;    
         }
         //update product with method add and second param to true
-        $this->add($product, TRUE);
+        if($this->add($product, TRUE) === true)
+        {
+            return true;
+        }
     }
 
     /**
@@ -198,6 +202,7 @@ class ShoppingCart extends Phalcon\Mvc\User\Component
         {
             $this->add($product, TRUE);
         }
+        return true;
     }
 
     /**
