@@ -1,0 +1,15 @@
+{
+    "name": "shoppingCart Phalcon PHP",
+    "description": "A shopping cart that allows multiple instances to work with PHP Phalcon",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "keywords": ["shopping cart Phalcon PHP", "shopping cart for Phalcon PHP", "shopping cart"],
+    "homepage": "http://uno-de-piera.com/",
+    "authors": [
+        {
+            "name": "unodepiera",
+            "email": "unodepiera@uno-de-piera.com"
+        }
+    ]
+}
