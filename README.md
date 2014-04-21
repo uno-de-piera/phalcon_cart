@@ -1,7 +1,11 @@
 <h1>Complet cart system for Phalcon</h1>
 <p>Phalcon cart provides complet cart system, allows you to create multiple instances to have all the areas we want independently.
+Cart works with Phalcon sessions, if you would, you can use adapter sessions for manage cart with database, more info.
 </p>
-* [Show demo](http://phalcon-tuts.com/phalconShop/)
+
+* [Incubator Link](https://github.com/phalcon/incubator/blob/master/README.md#installing-via-github)
+* [Phalcon Sesion Adapter](https://github.com/phalcon/incubator/tree/master/Library/Phalcon/Session/Adapter#phalconsessionadapter)
+* [Show demo](http://phalcon-tuts.com/phalconShop)
 
 <h1>Installation with Composer</h1>
 <p>Create a new file composer.json, open and add the next code</p>

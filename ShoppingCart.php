@@ -46,7 +46,15 @@ class ShoppingCart extends Phalcon\Mvc\User\Component
         {
             $this->_cart = $this->session->get($this->_identificator);
         }
-        
+    }
+
+    /**
+    * @desc - create a new instance for log class
+    * @access private
+    * @author Iparra
+    */
+    private function _instanceLog()
+    {
         $this->_createLogDir();
         $this->_logger = new FileAdapter("../app/logs/shoppingCart.log");
     }
@@ -79,6 +87,7 @@ class ShoppingCart extends Phalcon\Mvc\User\Component
         //check if isset keys id qty and price, otherwise return false
         if(!$product["id"] || !$product["qty"] || !$product["price"])
         {
+            $this->_instanceLog();
             $this->_logger->error(
                 "Error, the product need next keys: id, qty and price, line ".__LINE__." class ".__CLASS__."!"
             );   
@@ -88,6 +97,7 @@ class ShoppingCart extends Phalcon\Mvc\User\Component
         //check if is numeric values id qty and price, otherwise return false
         if(!is_numeric($product["id"]) || !is_numeric($product["qty"]) || !is_numeric($product["price"]))
         {
+            $this->_instanceLog();
             $this->_logger->error(
                 "Error, the product should have numerics id, qty y price, line ".__LINE__." class ".__CLASS__."!"
             );   
@@ -212,6 +222,7 @@ class ShoppingCart extends Phalcon\Mvc\User\Component
     */
     private function _logNotArray($line)
     {
+        $this->_instanceLog();
         $this->_logger->error(
             "Error, the product add to cart is empty o not is array, line ".$line." class ".__CLASS__."!"
         ); 
