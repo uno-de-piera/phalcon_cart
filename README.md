@@ -1,4 +1,4 @@
-<h1>Complet cart system for Phalcon</h1>
+<h1>Complete cart system for Phalcon PHP Framework</h1>
 <p>Phalcon cart provides complet cart system, allows you to create multiple instances to have all the areas we want independently.</p>
 <p>
 If ocurred any problem with proccess cart, the class store logs into app/logs/shoppingCart.log for more info.</p>
